@@ -1,0 +1,72 @@
+$pills-bg-gradientTop:  #09539f;
+$pills-bg-gradientBottom: #042c4f;
+$pills-bg-gradientFlat: #063E73;
+
+$header-bg-gradientTop: #fff;
+$header-bg-gradientBottom: #CED6E1;
+$header-bg-gradientFlat: #fff;
+
+$header-brand-height: 66px;
+
+@import "sass-bootstrap/lib/variablesMedicare";
+@import "sass-bootstrap/lib/bootstrap";
+
+header {
+    #brand {
+        display: block;
+        height: $header-brand-height;
+        overflow: hidden;
+        
+        img {
+            position: relative;
+            top: 0px;   
+        }
+    }
+    
+    @media (max-width: $screen-xs-max) {
+        #brand {
+            height: $header-brand-height - 20px;
+            
+            img {
+                top: -78px;
+            }
+        }
+    }
+}
+
+.nav-pills {
+    
+    > li {
+        > a {
+          padding: 5px 0px !important;
+            
+          &:hover,
+          &:focus {
+            background: $nav-pills-active-link-hover-bg;
+            color: #042c4f;
+          }
+        }
+    }
+}
+
+.dropdown-menu {
+    background-color: #add0ec;
+    padding: 10px;
+    margin: 0;
+    
+    li a {
+        font-weight: bold;
+        color: #002D53;
+        display: block;
+        height: 100%;
+        font-size: $font-size-base - 2px; 
+        padding: 8px 10px 8px 10px;
+        text-decoration: none;
+        background: #DDE4EE;
+    }
+    
+    .divider {
+        height: 2px;
+        margin: 0;
+    }
+}
